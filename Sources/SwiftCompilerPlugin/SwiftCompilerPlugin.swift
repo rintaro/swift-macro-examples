@@ -56,7 +56,7 @@ import SwiftDiagnostics
 public protocol CompilerPlugin {
   init()
 
-  var providingMarcos: [Any.Type] { get }
+  var providingMarcos: [Macro.Type] { get }
 }
 
 extension CompilerPlugin {

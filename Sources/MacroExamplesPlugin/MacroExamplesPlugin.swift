@@ -5,15 +5,17 @@ import SwiftSyntaxBuilder
 
 @main
 struct MyCompilerPlugin: CompilerPlugin {
-  var providingMarcos: [Any.Type] = [
+  var providingMarcos: [Macro.Type] = [
     AddBlocker.self,
-//    DictionaryStorageMacro.self,
+    DictionaryStorageMacro.self,
     FontLiteralMacro.self,
     NewTypeMacro.self,
-//    ObservableMacro.self,
+    ObservableMacro.self,
+    ObservablePropertyMacro.self,
     StringifyMacro.self,
     WarningMacro.self,
-//    WrapStoredPropertiesMacro.self,
+    WrapStoredPropertiesMacro.self,
+    AddCompletionHandlerMacro.self,
   ]
 }
 
