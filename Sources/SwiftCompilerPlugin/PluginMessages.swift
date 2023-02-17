@@ -16,12 +16,13 @@ internal enum HostToPluginMessage: Codable {
 
   case expandFreeStandingMacro(
     macro: PluginMessage.MacroReference,
-    syntax: PluginMessage.Syntax,
-    discriminator: String)
+    discriminator: String,
+    syntax: PluginMessage.Syntax)
 
   case expandAttachedMacro(
     macro: PluginMessage.MacroReference,
     macroRole: PluginMessage.MacroRole,
+    discriminator: String,
     customAttributeSyntax: PluginMessage.Syntax,
     declSyntax: PluginMessage.Syntax,
     parentDeclSyntax: PluginMessage.Syntax?)
